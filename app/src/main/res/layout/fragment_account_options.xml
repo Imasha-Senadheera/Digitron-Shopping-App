@@ -21,13 +21,13 @@
             android:layout_height="wrap_content"
             style="@style/h3"
             android:layout_marginTop="120dp"
-            android:drawableStart="@drawable/ic_kleine_shape"
+            android:drawableStart="@drawable/ic_digitron_shape"
             android:drawablePadding="6dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="Kleine."/>
+            android:text="Digitron"/>
 
         <TextView
             android:id="@+id/tvRightAddressForShopping"
