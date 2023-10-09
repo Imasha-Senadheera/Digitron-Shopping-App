@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "115809772916",
+    "project_id": "shoppingapp-d8b67",
+    "storage_bucket": "shoppingapp-d8b67.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115809772916:android:e328b6e4a241356e1e3821",
+        "android_client_info": {
+          "package_name": "com.example.digitron"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBdR_i_wTbBmpayj1ZC4lyXXIQTxi0NFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
