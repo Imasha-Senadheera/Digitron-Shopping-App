@@ -86,7 +86,7 @@ class RegisterFragment : Fragment() {
                 if (validation.password is RegisterValidation.Failed){
                     withContext(Dispatchers.Main){
                         binding.edPasswordRegister.apply {
-                            requestFocus()
+                            requestFocus ()
                             error = validation.password.message
                         }
                     }
