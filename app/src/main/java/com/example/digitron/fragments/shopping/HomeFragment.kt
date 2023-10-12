@@ -28,11 +28,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         val categoriesFragments = arrayListOf(
             MainCategoryFragment(),
-            ChairFragment(),
-            CupboardFragment(),
-            TableFragment(),
+            iPhoneFragment(),
+            MacFragment(),
+            AccessoriesFragment(),
             AccessoryFragment(),
-            FurnitureFragment()
+            AppleWatchesFragment()
         )
 
         binding.viewpagerHome.isUserInputEnabled = false
