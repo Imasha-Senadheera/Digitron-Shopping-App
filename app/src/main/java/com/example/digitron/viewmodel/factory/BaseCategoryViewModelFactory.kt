@@ -6,7 +6,7 @@ import com.example.digitron.data.Category
 import com.example.digitron.viewmodel.CategoryViewModel
 import com.google.firebase.firestore.FirebaseFirestore
 
-class BaseCategoryViewModelFactoryFactory(
+class BaseCategoryViewModelFactory(
     private val firestore: FirebaseFirestore,
     private val category: Category
 ): ViewModelProvider.Factory {

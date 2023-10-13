@@ -7,7 +7,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.digitron.data.Category
 import com.example.digitron.util.Resource
 import com.example.digitron.viewmodel.CategoryViewModel
-import com.example.digitron.viewmodel.factory.BaseCategoryViewModelFactoryFactory
+import com.example.digitron.viewmodel.factory.BaseCategoryViewModelFactory
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.AndroidEntryPoint
@@ -21,7 +21,7 @@ class IPadsFragment: BaseCategoryFragment() {
     lateinit var firestore: FirebaseFirestore
 
     val viewModel by viewModels<CategoryViewModel> {
-        BaseCategoryViewModelFactoryFactory(firestore, Category.Accessory)
+        BaseCategoryViewModelFactory(firestore, Category.IPads)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

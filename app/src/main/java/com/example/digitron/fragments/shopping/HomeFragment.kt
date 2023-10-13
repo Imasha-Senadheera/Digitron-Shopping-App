@@ -45,9 +45,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 0 -> tab.text = "Main"
                 1 -> tab.text = "iPhone"
                 2 -> tab.text = "Mac"
-                3 -> tab.text = "Apple Watch"
+                3 -> tab.text = "Accessory"
                 4 -> tab.text = "iPads"
-                5 -> tab.text = "Accessory"
+                5 -> tab.text = "Apple Watch"
             }
         }.attach()
     }
