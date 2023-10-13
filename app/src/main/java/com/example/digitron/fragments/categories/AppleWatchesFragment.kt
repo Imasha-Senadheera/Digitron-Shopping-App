@@ -21,7 +21,7 @@ class AppleWatchesFragment: BaseCategoryFragment() {
     lateinit var firestore: FirebaseFirestore
 
     val viewModel by viewModels<CategoryViewModel> {
-        BaseCategoryViewModelFactoryFactory(firestore, Category.Furniture)
+        BaseCategoryViewModelFactoryFactory(firestore, Category.AppleWatch)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

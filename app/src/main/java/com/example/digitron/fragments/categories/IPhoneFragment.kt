@@ -21,7 +21,7 @@ class IPhoneFragment : BaseCategoryFragment() {
     lateinit var firestore: FirebaseFirestore
 
     val viewModel by viewModels<CategoryViewModel> {
-        BaseCategoryViewModelFactoryFactory(firestore, Category.Chair)
+        BaseCategoryViewModelFactoryFactory(firestore, Category.IPhone)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
