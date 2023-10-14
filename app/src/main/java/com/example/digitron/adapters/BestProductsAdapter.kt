@@ -1,5 +1,6 @@
 package com.example.digitron.adapters
 
+import android.graphics.Color
 import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
@@ -16,26 +17,34 @@ class BestProductsAdapter : RecyclerView.Adapter<BestProductsAdapter.BestProduct
 
     inner class BestProductsViewHolder(private val binding: ProductRvItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
         fun bind(product: Product) {
             binding.apply {
                 val priceAfterOffer = product.offerPercentage.getProductPrice(product.price)
-                tvNewPrice.text = "$ ${String.format("%.2f", priceAfterOffer)}"
-                tvPrice.paintFlags = tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
-                if (product.offerPercentage == null)
+                tvNewPrice.text = "Rs. ${String.format("%.2f", priceAfterOffer)}"
+
+                // Check if the product has an offer and the offer is not equal to 0
+                if (product.offerPercentage != null && product.offerPercentage?.toInt() != 0) {
+                    tvPrice.paintFlags = tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+                    tvPrice.setTextColor(Color.BLUE)
+                    tvNewPrice.visibility = View.VISIBLE
+                } else {
+                    // If there is no offer or the offer is 0, remove the strike-through and make it not blue
+                    tvPrice.paintFlags = tvPrice.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
+                    tvPrice.setTextColor(Color.BLACK) // Change this to the desired non-blue color
                     tvNewPrice.visibility = View.INVISIBLE
+                }
 
                 Glide.with(itemView).load(product.images[0]).into(imgProduct)
-                tvPrice.text = "$ ${product.price}"
+                tvPrice.text = "Rs. ${product.price}"
                 tvName.text = product.name
             }
-
         }
     }
 
     private val diffCallback = object : DiffUtil.ItemCallback<Product>() {
         override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {
             return oldItem.id == newItem.id
-
         }
 
         override fun areContentsTheSame(oldItem: Product, newItem: Product): Boolean {
@@ -67,5 +76,4 @@ class BestProductsAdapter : RecyclerView.Adapter<BestProductsAdapter.BestProduct
     }
 
     var onClick: ((Product) -> Unit)? = null
-
 }
