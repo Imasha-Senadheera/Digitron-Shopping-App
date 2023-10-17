@@ -79,7 +79,7 @@
             app:layout_constraintStart_toStartOf="@id/linearTitlePrice"
             android:textSize="12sp"
             android:textStyle="bold"
-            android:text="$6000"/>
+            android:text="Rs. 469900"/>
 
         <View
             android:id="@+id/topLine"

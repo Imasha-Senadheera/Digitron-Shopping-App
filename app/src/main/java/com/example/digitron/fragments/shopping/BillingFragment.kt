@@ -139,7 +139,7 @@ class BillingFragment : Fragment() {
         billingProductsAdapter.differ.submitList(products)
 
 
-        binding.tvTotalPrice.text = "$ $totalPrice"
+        binding.tvTotalPrice.text = "Rs. $totalPrice"
 
 
         binding.buttonPlaceOrder.setOnClickListener {

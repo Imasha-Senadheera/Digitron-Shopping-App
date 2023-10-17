@@ -68,7 +68,7 @@ class OrderDetailFragment : Fragment() {
             tvAddress.text = "${order.address.street} ${order.address.city}"
             tvPhoneNumber.text = order.address.phone
 
-            tvTotalPrice.text = "$ ${order.totalPrice}"
+            tvTotalPrice.text = "Rs. ${order.totalPrice}"
 
         }
 
