@@ -1,5 +1,6 @@
 package com.example.digitron.adapters
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
@@ -16,16 +17,22 @@ class BestDealsAdapter : RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHold
         fun bind(product: Product) {
             binding.apply {
                 Glide.with(itemView).load(product.images[0]).into(imgBestDeal)
+
                 product.offerPercentage?.let {
                     val remainingPricePercentage = 1f - it
                     val priceAfterOffer = remainingPricePercentage * product.price
-                    tvNewPrice.text = "Rs. ${String.format("%.2f",priceAfterOffer)}"
+                    tvNewPrice.text = "Rs. ${String.format("%.2f", priceAfterOffer)}"
                 }
+
+                // Apply strike-through to the old price
+                tvOldPrice.paintFlags = tvOldPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+
                 tvOldPrice.text = "Rs. ${product.price}"
                 tvDealProductName.text = product.name
             }
         }
     }
+
 
     private val diffCallback = object : DiffUtil.ItemCallback<Product>() {
         override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {
