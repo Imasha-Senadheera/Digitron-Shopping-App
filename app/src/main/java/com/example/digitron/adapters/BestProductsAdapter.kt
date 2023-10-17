@@ -31,7 +31,7 @@ class BestProductsAdapter : RecyclerView.Adapter<BestProductsAdapter.BestProduct
                 } else {
                     // If there is no offer or the offer is 0, remove the strike-through and make it not blue
                     tvPrice.paintFlags = tvPrice.paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
-                    tvPrice.setTextColor(Color.BLACK) // Change this to the desired non-blue color
+                    tvPrice.setTextColor(Color.BLACK)
                     tvNewPrice.visibility = View.INVISIBLE
                 }
 
