@@ -1,6 +1,8 @@
 package com.example.digitron.fragments.settings
 
+import android.content.ContentValues
 import android.content.Intent
+import android.database.sqlite.SQLiteDatabase
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
@@ -13,12 +15,17 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.example.digitron.data.User
 import com.example.digitron.databinding.FragmentUserAccountBinding
 import com.example.digitron.dialog.setupBottomSheetDialog
+import com.example.digitron.sqllite.DatabaseHelper
 import com.example.digitron.util.Resource
 import com.example.digitron.viewmodel.UserAccountViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,6 +38,9 @@ class UserAccountFragment : Fragment() {
     private lateinit var imageActivityResultLauncher: ActivityResultLauncher<Intent>
 
     private var imageUri: Uri? = null
+
+    private lateinit var dbHelper: DatabaseHelper
+    private lateinit var database: SQLiteDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,12 +58,15 @@ class UserAccountFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentUserAccountBinding.inflate(inflater)
+        dbHelper = DatabaseHelper(requireContext())
+        database = dbHelper.writableDatabase
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Observe the user data
         lifecycleScope.launchWhenStarted {
             viewModel.user.collectLatest {
                 when (it) {
@@ -72,6 +85,7 @@ class UserAccountFragment : Fragment() {
             }
         }
 
+        // Observe the update result
         lifecycleScope.launchWhenStarted {
             viewModel.updateInfo.collectLatest {
                 when (it) {
@@ -91,12 +105,14 @@ class UserAccountFragment : Fragment() {
             }
         }
 
+        // Handle update password
         binding.tvUpdatePassword.setOnClickListener {
             setupBottomSheetDialog {
 
             }
         }
 
+        // Handle save button
         binding.buttonSave.setOnClickListener {
             binding.apply {
                 val firstName = edFirstName.text.toString().trim()
@@ -104,15 +120,21 @@ class UserAccountFragment : Fragment() {
                 val email = edEmail.text.toString().trim()
                 val user = User(firstName, lastName, email)
                 viewModel.updateUser(user, imageUri)
+
+                // Get the database file path
+                val dbPath = requireContext().getDatabasePath("UserDatabase").absolutePath
+
+                // Insert the user data into the database
+                insertUserDataIntoDatabase(user)
             }
         }
 
+        // Handle image selection
         binding.imageEdit.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.type = "image/*"
             imageActivityResultLauncher.launch(intent)
         }
-
     }
 
     private fun showUserInformation(data: User) {
@@ -149,14 +171,32 @@ class UserAccountFragment : Fragment() {
             buttonSave.visibility = View.INVISIBLE
         }
     }
+
+    private fun insertUserDataIntoDatabase(user: User) {
+        // Insert user data into the database
+        val contentValues = ContentValues()
+        contentValues.put("firstName", user.firstName)
+        contentValues.put("lastName", user.lastName)
+        contentValues.put("email", user.email)
+        contentValues.put("imagePath", user.imagePath)
+
+        val rowId = database.insert("UserTable", null, contentValues)
+        if (rowId != -1L) {
+            // Data inserted successfully
+            Toast.makeText(requireContext(), "Data saved to the database", Toast.LENGTH_SHORT).show()
+        } else {
+            // Error occurred while inserting data
+            Toast.makeText(requireContext(), "Failed to save data to the database", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    // Ensure that the database is properly closed when the fragment is destroyed
+    init {
+        lifecycle.addObserver(object : LifecycleObserver {
+            @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+            fun onDestroy() {
+                database.close()
+            }
+        })
+    }
 }
-
-
-
-
-
-
-
-
-
-
