@@ -16,6 +16,34 @@ And it targets merchants that sell tech products to enable them to spread their 
 </br>
 
 # Preview
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/be9e9673-4eec-479f-8c68-7850a92f28f7" >
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/3df95b84-54d2-42f0-bc6c-16ad7ea242af" >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+<img width="200" alt="1" src="    " >
+
+
+
+
+
+
+
+
 
 
 </br>
