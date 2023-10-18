@@ -18,33 +18,22 @@ And it targets merchants that sell tech products to enable them to spread their 
 # Preview
 <img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/be9e9673-4eec-479f-8c68-7850a92f28f7" >
 <img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/3df95b84-54d2-42f0-bc6c-16ad7ea242af" >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-<img width="200" alt="1" src="    " >
-
-
-
-
-
-
-
-
-
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/c8bd74ad-e59b-4270-a7d7-1a8c545613cc" >
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/6e6a0618-85e0-4119-9df7-56f2811ce0cd" >
+</br></br></br>
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/3153302c-57ff-4027-b48a-6074602164ee" >
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/8a1590c4-9ca7-4b9c-bc64-354220fb613a" >
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/8d37a7d4-93f2-47d1-9c71-ec22817aea90" >
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/a51bdcf6-94c7-4db0-9882-7e6e466a4217" >
+</br></br></br>
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/19b4717b-9128-4bda-b8c2-74f83035e488" >
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/95e438b5-acd4-46f1-8cc7-16c7f558183b    " >
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/f5640ea6-9f56-4466-b203-abb484637fad    " >
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/8dbef94d-0141-4a41-b412-52ac368a3c6d    " >
+</br></br></br>
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/d476cacd-256d-4644-88f4-8ccb9052bff1    " >
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/94b94596-3137-4527-b64c-b7370107f7b0    " >
+<img width="200" alt="1" src="https://github.com/Imasha-Senadheera/Digitron-Shopping-App/assets/121493197/fc052c63-5d9b-44f6-98a0-6d4ece0ec8bd    " >
 
 </br>
 </br>
