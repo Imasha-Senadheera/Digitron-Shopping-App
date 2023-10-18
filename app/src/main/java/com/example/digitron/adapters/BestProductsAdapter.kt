@@ -19,11 +19,19 @@ class BestProductsAdapter : RecyclerView.Adapter<BestProductsAdapter.BestProduct
         RecyclerView.ViewHolder(binding.root) {
         fun bind(product: Product) {
             binding.apply {
-                val priceAfterOffer = product.offerPercentage.getProductPrice(product.price)
+                val priceAfterOffer = product.offerPercentage?.let {
+                    it.getProductPrice(product.price)
+                } ?: product.price
+
                 tvNewPrice.text = "Rs. ${String.format("%.2f", priceAfterOffer)}"
-                tvPrice.paintFlags = tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
-                if (product.offerPercentage == null)
+
+                // Check if offerPercentage is not null before applying the strike-through
+                if (product.offerPercentage != null) {
+                    tvPrice.paintFlags = tvPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+                } else {
+                    // If offerPercentage is null, hide the new price
                     tvNewPrice.visibility = View.INVISIBLE
+                }
 
                 Glide.with(itemView).load(product.images[0]).into(imgProduct)
                 tvPrice.text = "Rs. ${product.price}"
@@ -31,6 +39,7 @@ class BestProductsAdapter : RecyclerView.Adapter<BestProductsAdapter.BestProduct
             }
         }
     }
+
 
     private val diffCallback = object : DiffUtil.ItemCallback<Product>() {
         override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {

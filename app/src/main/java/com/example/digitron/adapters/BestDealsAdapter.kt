@@ -24,8 +24,10 @@ class BestDealsAdapter : RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHold
                     tvNewPrice.text = "Rs. ${String.format("%.2f", priceAfterOffer)}"
                 }
 
-                // Apply strike-through to the old price
-                tvOldPrice.paintFlags = tvOldPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+                // Check if offerPercentage is not null before applying the strike-through
+                if (product.offerPercentage != null) {
+                    tvOldPrice.paintFlags = tvOldPrice.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+                }
 
                 tvOldPrice.text = "Rs. ${product.price}"
                 tvDealProductName.text = product.name
