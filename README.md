@@ -39,10 +39,11 @@ And it targets merchants that sell tech products to enable them to spread their 
 </br>
 
 # Libraries and technologies used
-* Navigation component : one activity contains multiple fragments instead of creating multiple activites.
-* Firebase Auth : Manging Accounts/ Loging in and Registrations.
-* Firebase Firestore : Database for the system.
-* Firebase Storage : To store proucts images and user profile pictures.
-* Coroutines : do some code in the background.
-* View binding : instead of inflating views manually view binding will take care of that.
-* Glide : Catch images and load them in imageView.
+*	Navigation component : one activity contains multiple fragments instead of creating multiple activities.
+*	Firebase Auth : Manging Accounts/Login in and Registrations.
+*	Firebase Firestore : Database for the system.
+*	Firebase Storage : To store product images and user profile pictures.
+*	Coroutines : do some code in the background.
+*	View binding : instead of inflating views manually view binding will take care of that.
+*	Glide : Catch images and load them in imageView.
+
