@@ -1,5 +1,5 @@
 # Digitron-Shopping-App
-Digitron app targets people who are looking to buy high quality tech products for their purpose e.g : laptops, keyboards. 
+Digitron app targets people who are looking to buy high quality tech products for their purpose e.g : laptops, phones, accesorries. 
 And it targets merchants that sell tech products to enable them to spread their markets and put their products online so everyone can check them out and order them.
 </br>
 </br>
